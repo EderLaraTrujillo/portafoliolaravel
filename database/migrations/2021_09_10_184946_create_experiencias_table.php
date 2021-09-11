@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHabilidadesTable extends Migration
+class CreateExperienciasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateHabilidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('habilidades', function (Blueprint $table) {
+        Schema::create('experiencias', function (Blueprint $table) {
             $table->id();
-            $table->string('nombreHabilidad');
-            $table->tinyInteger('porcentajenivel');
+            $table->string('Empresa', 200);
+            $table->date('Fecha_Ingreso');
+            $table->date('Fecha_Fin');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateHabilidadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('habilidades');
+        Schema::dropIfExists('experiencias');
     }
 }
