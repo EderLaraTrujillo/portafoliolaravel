@@ -14,6 +14,7 @@ class Perfil extends Migration
     public function up()
     {
         // Escribimos todo el código:
+        
     }
 
     /**
